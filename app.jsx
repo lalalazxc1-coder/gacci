@@ -248,11 +248,103 @@ const App = () => {
                         <p className="story-text italic border-l-2 border-[#dbeafe] pl-8 py-4">
                             «С ним я чувствую себя дома. Два разных пути слились в один общий».
                         </p>
-                        <p className="story-text mt-8 text-sm">
-                            Это не просто набор фотографий. Это история нашей гордости и преданности. Сквозь любые преграды мы,
-                            два любящих мужчины, продолжаем идти по жизни рука об руку. Смелые, честные и неразлучные.
-                        </p>
+                        <div className="mt-8 space-y-6">
+                            <p className="story-text text-sm">
+                                Это не просто набор фотографий. Это история нашей любви, гордости и преданности. Сквозь любые преграды мы,
+                                два любящих мужчины, продолжаем идти по жизни рука об руку.
+                            </p>
+                            <div className="bg-[#f0f7ff] p-6 rounded-lg border-l-4 border-[#5c8eb8]">
+                                <h4 className="font-serif text-xl mb-2">Наше Счастье в Цифрах</h4>
+                                <div className="grid grid-cols-2 gap-4 text-center mt-4">
+                                    <div>
+                                        <span className="block text-2xl font-bold text-[#5c8eb8]">365+</span>
+                                        <span className="text-[10px] uppercase tracking-widest">Дней вместе</span>
+                                    </div>
+                                    <div>
+                                        <span className="block text-2xl font-bold text-[#5c8eb8]">∞</span>
+                                        <span className="text-[10px] uppercase tracking-widest">Планов</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
                     </motion.div>
+                </div>
+            </section>
+
+            {/* NEW: Love Story Timeline Section */}
+            <section className="section bg-[#fafcfe] z-10 relative overflow-hidden">
+                <div className="container">
+                    <div className="text-center mb-16">
+                        <h2 className="text-4xl md:text-6xl font-serif">Наша <span className="text-[#5c8eb8]">История</span></h2>
+                        <p className="mt-4 text-[#4a5568] uppercase tracking-[0.3em] text-[10px]">Путь, который мы прошли</p>
+                    </div>
+
+                    <div className="max-w-4xl mx-auto relative">
+                        {/* Central Line */}
+                        <div className="absolute left-1/2 transform -translate-x-1/2 h-full w-[1px] bg-[#dbeafe] hidden md:block" />
+
+                        <div className="space-y-12">
+                            {/* Milestone 1 */}
+                            <motion.div 
+                                initial={{ opacity: 0, x: -30 }} 
+                                whileInView={{ opacity: 1, x: 0 }} 
+                                viewport={{ once: true }}
+                                className="flex flex-col md:flex-row items-center gap-8"
+                            >
+                                <div className="md:w-1/2 md:text-right">
+                                    <h3 className="text-2xl font-serif text-[#5c8eb8]">Первая Встреча</h3>
+                                    <p className="text-xs text-[#a0aec0] mb-2 uppercase tracking-widest">Весна 2025</p>
+                                    <p className="story-text text-sm leading-relaxed">
+                                        Тот самый день, когда случайный взгляд перерос в нечто большее. Мы сразу поняли, что между нами есть редкая искра, которую невозможно игнорировать.
+                                    </p>
+                                </div>
+                                <div className="relative z-20 bg-white p-2 rounded-full border-2 border-[#5c8eb8]">
+                                    <Heart className="w-4 h-4 text-[#5c8eb8] fill-[#5c8eb8]" />
+                                </div>
+                                <div className="md:w-1/2" />
+                            </motion.div>
+
+                            {/* Milestone 2 */}
+                            <motion.div 
+                                initial={{ opacity: 0, x: 30 }} 
+                                whileInView={{ opacity: 1, x: 0 }} 
+                                viewport={{ once: true }}
+                                className="flex flex-col md:flex-row items-center gap-8"
+                            >
+                                <div className="md:w-1/2 order-2 md:order-1" />
+                                <div className="relative z-20 bg-white p-2 rounded-full border-2 border-[#90cdf4]">
+                                    <Heart className="w-4 h-4 text-[#90cdf4] fill-[#90cdf4]" />
+                                </div>
+                                <div className="md:w-1/2 order-1 md:order-2">
+                                    <h3 className="text-2xl font-serif text-[#5c8eb8]">Первое Путешествие</h3>
+                                    <p className="text-xs text-[#a0aec0] mb-2 uppercase tracking-widest">Лето 2025</p>
+                                    <p className="story-text text-sm leading-relaxed">
+                                        Дороги, новые города и бесконечные разговоры под звездами. Именно тогда мы осознали, что хотим делить этот мир только друг с другом.
+                                    </p>
+                                </div>
+                            </motion.div>
+
+                            {/* Milestone 3 */}
+                            <motion.div 
+                                initial={{ opacity: 0, x: -30 }} 
+                                whileInView={{ opacity: 1, x: 0 }} 
+                                viewport={{ once: true }}
+                                className="flex flex-col md:flex-row items-center gap-8"
+                            >
+                                <div className="md:w-1/2 md:text-right">
+                                    <h3 className="text-2xl font-serif text-[#5c8eb8]">Общий Дом</h3>
+                                    <p className="text-xs text-[#a0aec0] mb-2 uppercase tracking-widest">Зима 2025</p>
+                                    <p className="story-text text-sm leading-relaxed">
+                                        Создание нашего собственного пространства, где всегда тепло, уютно и безопасно. Место, где мы — это просто мы, без лишних масок.
+                                    </p>
+                                </div>
+                                <div className="relative z-20 bg-white p-2 rounded-full border-2 border-[#5c8eb8]">
+                                    <Heart className="w-4 h-4 text-[#5c8eb8] fill-[#5c8eb8]" />
+                                </div>
+                                <div className="md:w-1/2" />
+                            </motion.div>
+                        </div>
+                    </div>
                 </div>
             </section>
 
